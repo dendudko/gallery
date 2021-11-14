@@ -1,19 +1,15 @@
-//let loadImages = fetch()
+let loadImages = fetch('images.json');
 
-fetch('/images.json').then(response => {
+loadImages.then(response => {
     response.json().then(result => {
-        addImage(result.hi);
+        add(result.img1);
+        add(result.img2);
+        add(result.base64);
     });
 });
 
-function addImage(url) {
+function add(url) {
     const img = document.createElement('img');
-    img.setAttribute('src', url);
-    document.querySelector('.content').append(img);
-}
-
-function addImageBase64(base64) {
-    const img = new Image();
-    img.src = base64;
-    document.querySelector('.content').append(img);
+    img.src = url;
+    document.querySelector('.gallery').append(img);
 }
