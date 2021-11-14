@@ -1,0 +1,13 @@
+body{
+    background: rgb(255,180,213);
+    background: linear-gradient(45deg, rgba(255,180,213,1) 0%, rgba(255,214,167,1) 50%, rgba(176,255,247,1) 100%);
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    margin:5vh;
+    min-width: 90vh;
+    height: 90vh;
+    background-color: white;
+}
